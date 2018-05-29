@@ -6,18 +6,19 @@ public:
     std::string parsedChar ="";
         for ( std::string::iterator it = moves.begin(); it != moves.end(); ++it){
             parsedChar = *it;
+            
             //std::cout << parsedChar <<std::endl;
-            if(strcmp(parsedChar.c_str(),"U")==0){
+            if(parsedChar == "U"){
                 y+=1;
             }
-            else if(strcmp(parsedChar.c_str(),"D")==0){
+            else if(parsedChar == "D"){
                 y-=1;
             }
-            else if(strcmp(parsedChar.c_str(),"L")==0){
-                x-=1;
-            }
-            else if(strcmp(parsedChar.c_str(),"R")==0){
+            else if(parsedChar == "L"){
                 x+=1;
+            }
+            else if(parsedChar == "R"){
+                x-=1;
             }
         }
 
