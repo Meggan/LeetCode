@@ -15,7 +15,7 @@ public:
         
         //for all words, itterate through each letter and transform to morseCode string
         for (size_t i=0; i<words.size(); i++){
-            std::cout<< "Word: " << words[i] << std::endl;
+            //std::cout<< "Word: " << words[i] << std::endl;
             morseCode = "";
             for (char c : words[i]){
                 parsedChar = c;
@@ -23,8 +23,8 @@ public:
                 morseCode += map.find(parsedChar)->second;   
             }
             transform.insert(morseCode);
-            std::cout<< "Transformed: " <<morseCode << std::endl << 
-            "Unique Transformations: "<< transform.size() <<std::endl;
+            //std::cout<< "Transformed: " <<morseCode << std::endl << 
+            //"Unique Transformations: "<< transform.size() <<std::endl;
         }        
         return transform.size();
     }
